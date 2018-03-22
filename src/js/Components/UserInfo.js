@@ -11,12 +11,15 @@ const styles =  {
   repoInfoBlock:{
     border: '1px solid #d1d5da',
     borderRadius: '3px',
-    minimumHeight:'70px'
+    minHeight:'70px'
   },
   name:{
     color:"#0366d6",
     fontSize:'18px',
     fontWeight:'bold'
+  },
+  buttonBadge:{
+    width:'90px'
   }
 }
 
@@ -45,9 +48,18 @@ export default class UserInfo extends React.Component{
       const repoInfo = data.map((repoId)=>
           <div className="row" key={repoId.id}>
             <div className="col-xs-12 col-md-9" style={styles.repoInfoBlock}>
-              <h1 style={styles.name}>{repoId.name}</h1>
+            <div className="row">
+              <div className="col-xs-6 col-md-10"><h1 style={styles.name}>{repoId.name}</h1></div>
+              <div className="col-xs-6 col-md-2">
+                <button className="btn btn-warning" type="button" style={styles.buttonBadge}>
+                  Star <span className="badge">{repoId.stargazers_count}</span>
+                </button>
+              </div>
+            </div>
+            <div>
               <h6>{repoId.description}</h6>
             </div>
+          </div>
           </div>
       );
       this.setState({'repoInformation':repoInfo});
