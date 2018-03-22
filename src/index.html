@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="/css/style.css" >
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://github.com/apple-touch-icon-76x76.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+
+      $(".panel-heading").click(function(){ 
+        console.log("Entering on heading Click");
+        $('#accordion .panel-heading').not(this).removeClass('isOpen');
+        $(this).toggleClass('isOpen');
+        $(this).next(".panel-collapse").addClass('thePanel');
+        $('#accordion .panel-collapse').not('.thePanel').slideUp("slow"); 
+        $(".thePanel").slideToggle("medium").removeClass('thePanel');
+      });
+    }); 
+  </script>
+
+	<style type="text/css">
+    body{
+      font-family: 'Unica One', cursive;
+      background-color: #617C58;
+    }
+    </style>
+
+	<title> Repository Manager</title>
+</head>
+<body>
+	<div id="app">
+
+	</div>
+	<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
