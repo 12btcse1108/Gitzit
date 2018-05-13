@@ -6,4 +6,4 @@ npm install
 npm start
 
 heroku url::
-https://msysapp.herokuapp.com/
+https://gitzit.herokuapp.com/
